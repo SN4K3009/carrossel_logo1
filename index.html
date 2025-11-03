@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrossel de Logos</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .scroll-container {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      animation: scroll 25s linear infinite;
+    }
+
+    .logo-strip {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .logo-strip img {
+      height: 120px;
+      margin: 0 30px;
+      filter: grayscale(100%);
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo-strip img:hover {
+      opacity: 1;
+      filter: none;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-container">
+    <div class="logo-strip">
+      <img src="https://i.imgur.com/UQOIkyp.png">
+      <img src="https://i.imgur.com/6wlmCBr.png">
+      <img src="https://i.imgur.com/0egsMhz.jpeg">
+      <img src="https://i.imgur.com/Cys2bYe.jpeg">
+      <img src="https://i.imgur.com/UQOIkyp.png"> <!-- repete para loop suave -->
+      <img src="https://i.imgur.com/6wlmCBr.png">
+      <img src="https://i.imgur.com/0egsMhz.jpeg">
+      <img src="https://i.imgur.com/Cys2bYe.jpeg">
+    </div>
+  </div>
+</body>
+</html>
